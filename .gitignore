@@ -1,0 +1,7 @@
+/build/
+/deps/
+/subprojects/*
+!/subprojects/
+!/subprojects/frida-core.wrap
+src/obj
+src/bin
