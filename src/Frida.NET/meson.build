@@ -1,4 +1,3 @@
-
 fs = import('fs')
 
 project_file = fs.copyfile('Frida.NET.csproj', 'Frida.NET.csproj')
