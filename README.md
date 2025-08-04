@@ -10,5 +10,5 @@
   - dotnet build GirCore.Libs.slnf
 - [x] Build gir.core/GirTool with meson
 - [x] Properly call GirTool to generate sources
-- [ ] Make everything internal of generated bindings except enums and delegates
+- [x] Make everything internal of generated bindings except enums
 - [ ] On windows, build frida-core with `windows-x86_64-md`

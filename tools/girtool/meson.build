@@ -2,10 +2,10 @@ host = host_machine
 exe_suffix = host.system() == 'windows' ? '.exe' : ''
 
 girinit = custom_target('initialize-gir-core',
-  output: 'girinit.stamp',
   input: [
     files('initialize-gir-core.py')
   ],
+  output: 'girinit.stamp',
   command: [
     'python',
     files('initialize-gir-core.py'),

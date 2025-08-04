@@ -1,7 +1,11 @@
+.idea/
 /build/
 /deps/
 /subprojects/*
 !/subprojects/
 !/subprojects/frida-core.wrap
-src/obj
-src/bin
+obj
+bin
+*.user
+src/Frida.NET.Bindings/Internal
+src/Frida.NET.Bindings/Public

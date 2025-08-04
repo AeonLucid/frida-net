@@ -4,10 +4,21 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RootNamespace>Frida</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\gir.core\src\Libs\Gio-2.0\Gio-2.0.csproj" IncludeAssets="none" />
+    <ProjectReference Include="..\..\gir.core\src\Libs\GLib-2.0\GLib-2.0.csproj" IncludeAssets="none" />
+    <ProjectReference Include="..\..\gir.core\src\Libs\GObject-2.0\GObject-2.0.csproj" IncludeAssets="none" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Frida.NET.Bindings\Frida.NET.Bindings.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="meson.build" />
   </ItemGroup>
 
 </Project>

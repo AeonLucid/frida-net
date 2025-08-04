@@ -7,19 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\gir.core\src\Libs\Gio-2.0\Gio-2.0.csproj" IncludeAssets="none" />
-    <ProjectReference Include="..\..\..\gir.core\src\Libs\GLib-2.0\GLib-2.0.csproj" IncludeAssets="none" />
-    <ProjectReference Include="..\..\..\gir.core\src\Libs\GObject-2.0\GObject-2.0.csproj" IncludeAssets="none" />
+    <ProjectReference Include="..\..\gir.core\src\Libs\Gio-2.0\Gio-2.0.csproj" IncludeAssets="none" />
+    <ProjectReference Include="..\..\gir.core\src\Libs\GLib-2.0\GLib-2.0.csproj" IncludeAssets="none" />
+    <ProjectReference Include="..\..\gir.core\src\Libs\GObject-2.0\GObject-2.0.csproj" IncludeAssets="none" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\gir.core\src\Libs\Gio-2.0\bin\$(Platform)\$(Configuration)\$(TargetFramework)\Gio-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
-    <None Include="..\..\..\gir.core\src\Libs\GLib-2.0\bin\$(Platform)\$(Configuration)\$(TargetFramework)\GLib-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
-    <None Include="..\..\..\gir.core\src\Libs\GObject-2.0\bin\$(Platform)\$(Configuration)\$(TargetFramework)\GObject-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
+    <None Include="..\..\gir.core\src\Libs\Gio-2.0\bin\$(Platform)\$(Configuration)\$(TargetFramework)\Gio-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
+    <None Include="..\..\gir.core\src\Libs\GLib-2.0\bin\$(Platform)\$(Configuration)\$(TargetFramework)\GLib-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
+    <None Include="..\..\gir.core\src\Libs\GObject-2.0\bin\$(Platform)\$(Configuration)\$(TargetFramework)\GObject-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
   </ItemGroup>
 
   <ItemGroup>
     <InternalsVisibleTo Include="Frida.NET" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="meson.build" />
   </ItemGroup>
 
 </Project>

@@ -9,8 +9,6 @@ else
   frida_gir = girdir / 'Frida-1.0.gir'
 endif
 
-project_file = fs.copyfile('Frida.NET.Bindings.csproj', 'Frida.NET.Bindings.csproj')
-
 generate_bindings = custom_target('generate-bindings',
   input: [
     frida_gir
@@ -24,21 +22,39 @@ generate_bindings = custom_target('generate-bindings',
     '--search-path-windows', girdir,
     '--output', meson.current_build_dir(),
     frida_gir.full_path()
+  ]
+)
+
+copy_bindings = custom_target('copy-bindings',
+  input: [
+    files('helper.py')
   ],
-  build_by_default: true
+  output: 'copybindings.stamp',
+  depends: [generate_bindings],
+  command: [
+    'python',
+    files('helper.py'),
+    '--bindings-in', generate_bindings,
+    '--bindings-out', meson.current_source_dir(),
+    '--dummy-output-file', '@OUTPUT@',
+  ]
 )
 
 build_library_bindings = custom_target(
   'build-library-bindings',
-  input: project_file,
+  input: [
+    files(
+      'Frida.NET.Bindings.csproj'
+    )
+  ],
   output: 'Frida.NET.Bindings.1.0.0.nupkg',
-  depends: [generate_bindings],
+  depends: [copy_bindings],
   command: [
     'dotnet',
     'pack',
     '-o', meson.current_build_dir(),
     '-c', 'Release',
-    project_file
+    files('Frida.NET.Bindings.csproj')
   ],
   build_by_default: true
 )
