@@ -2,10 +2,11 @@ fs = import('fs')
 
 project_file = fs.copyfile('Frida.NET.csproj', 'Frida.NET.csproj')
 
-custom_target(
+build_library = custom_target(
   'build-library',
   input: project_file,
   output: 'Frida.NET.1.0.0.nupkg',
+  depends: [build_library_bindings],
   command: [
     'dotnet',
     'pack',

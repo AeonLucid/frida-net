@@ -28,7 +28,7 @@ generate_bindings = custom_target('generate-bindings',
   build_by_default: true
 )
 
-custom_target(
+build_library_bindings = custom_target(
   'build-library-bindings',
   input: project_file,
   output: 'Frida.NET.Bindings.1.0.0.nupkg',
