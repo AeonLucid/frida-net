@@ -9,19 +9,5 @@ else
   frida_gir = girdir / 'Frida-1.0.gir'
 endif
 
-# Generate bindings
-generate_bindings = custom_target('generate-bindings',
-  output: ['aaa'],
-  command: [
-    girtool,
-    'generate',
-    '--search-path-linux', girdir,
-    '--search-path-macos', girdir,
-    '--search-path-windows', girdir,
-    '--output', meson.current_build_dir(),
-    frida_gir
-  ],
-  build_by_default: true
-)
-
-# 
+subdir('Frida.NET.Bindings')
+subdir('Frida.NET')
