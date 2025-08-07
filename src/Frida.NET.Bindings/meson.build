@@ -32,7 +32,7 @@ copy_bindings = custom_target('copy-bindings',
   output: 'copybindings.stamp',
   depends: [generate_bindings],
   command: [
-    'python',
+    find_program('python3'),
     files('helper.py'),
     '--bindings-in', generate_bindings,
     '--bindings-out', meson.current_source_dir(),

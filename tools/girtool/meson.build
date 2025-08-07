@@ -7,7 +7,7 @@ girinit = custom_target('initialize-gir-core',
   ],
   output: 'girinit.stamp',
   command: [
-    'python',
+    find_program('python3'),
     files('initialize-gir-core.py'),
     '--gir-scripts', meson.source_root() / 'gir.core' / 'scripts',
     '--gir-src', meson.source_root() / 'gir.core' / 'src',
