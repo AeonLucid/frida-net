@@ -25,6 +25,5 @@ girtool = custom_target('build-gir-tool',
     '-c', 'Release',
     '-p:PublishSingleFile=true',
     meson.source_root() / 'gir.core' / 'src' / 'Generation' / 'GirTool' / 'GirTool.csproj'
-  ],
-  build_by_default: true
+  ]
 )

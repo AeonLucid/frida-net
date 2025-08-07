@@ -2,6 +2,10 @@
 
 ## Build
 
+Library: `make build-library`
+Bindings: `make build-library-bindings`
+Runtime: `make build-runtime`
+
 ### Windows
 
 ```

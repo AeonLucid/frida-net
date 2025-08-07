@@ -5,6 +5,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Frida</RootNamespace>
+    <PackageId>Frida.NET</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Authors>Frida Developers</Authors>
+    <PackageProjectUrl>https://github.com/frida/frida-net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/frida/frida-net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

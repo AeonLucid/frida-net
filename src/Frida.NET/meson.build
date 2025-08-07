@@ -14,6 +14,7 @@ build_library = custom_target(
     'pack',
     '-o', meson.current_build_dir(),
     '-c', 'Release',
+    '-p:VersionPrefix=' + meson.project_version(),
     files('Frida.NET.csproj')
   ]
 )
