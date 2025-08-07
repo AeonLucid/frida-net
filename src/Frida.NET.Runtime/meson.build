@@ -9,10 +9,10 @@ endif
 
 host_system = host_machine.system()
 
+dll_kwargs = {}
+
 if host_system == 'windows'
-  vs_module_defs = 'Frida.def'
-else
-  vs_module_defs = ''
+  dll_kwargs += {'vs_module_defs': 'Frida.def'}
 endif
 
 wrapper_sources = files('frida-wrapper.c')
@@ -21,7 +21,8 @@ frida_dll = shared_library(
   'Frida',
   wrapper_sources,
   dependencies: [ frida_core_dep ],
-  vs_module_defs: vs_module_defs
+  name_prefix: '',
+  kwargs: dll_kwargs
 )
 
 library_runtime_output = 'Frida.NET.Runtime.' + meson.project_version() + '.nupkg'

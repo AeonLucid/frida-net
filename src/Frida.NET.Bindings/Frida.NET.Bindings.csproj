@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\gir.core\src\Libs\Gio-2.0\bin\$(Platform)\$(Configuration)\$(TargetFramework)\Gio-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
-    <None Include="..\..\gir.core\src\Libs\GLib-2.0\bin\$(Platform)\$(Configuration)\$(TargetFramework)\GLib-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
-    <None Include="..\..\gir.core\src\Libs\GObject-2.0\bin\$(Platform)\$(Configuration)\$(TargetFramework)\GObject-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
+    <None Include="..\..\gir.core\src\Libs\Gio-2.0\bin\**\$(TargetFramework)\Gio-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
+    <None Include="..\..\gir.core\src\Libs\GLib-2.0\bin\**\$(TargetFramework)\GLib-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
+    <None Include="..\..\gir.core\src\Libs\GObject-2.0\bin\**\$(TargetFramework)\GObject-2.0.dll" Pack="true" PackagePath="lib\net9.0" />
   </ItemGroup>
 
   <ItemGroup>
