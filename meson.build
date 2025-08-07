@@ -6,17 +6,9 @@ project('frida-net', 'c',
   default_options: [],
 )
 
-frida_core_options = [
+frida_core_dep = dependency('frida-core-1.0', default_options: [
   'frida_version=' + meson.project_version()
-]
-
-if host_machine.system() == 'windows'
-  frida_core_options += [
-    'b_vscrt=md'
-  ]
-endif
-
-frida_core_dep = dependency('frida-core-1.0', default_options: frida_core_options)
+])
 
 subdir('tools/girtool')
 subdir('src')

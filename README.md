@@ -1,5 +1,14 @@
 # frida-net - WIP
 
+## Build
+
+### Windows
+
+```
+.\configure.bat --host=windows-x86_64-md
+.\make.bat
+```
+
 ## TODO
 
 - [x] Build gir.core with meson

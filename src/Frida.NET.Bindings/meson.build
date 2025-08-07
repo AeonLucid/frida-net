@@ -55,6 +55,5 @@ build_library_bindings = custom_target(
     '-o', meson.current_build_dir(),
     '-c', 'Release',
     files('Frida.NET.Bindings.csproj')
-  ],
-  build_by_default: true
+  ]
 )

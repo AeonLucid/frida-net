@@ -15,6 +15,5 @@ build_library = custom_target(
     '-o', meson.current_build_dir(),
     '-c', 'Release',
     files('Frida.NET.csproj')
-  ],
-  build_by_default: true
+  ]
 )
